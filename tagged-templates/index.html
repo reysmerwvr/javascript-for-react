@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tagged Template</title>
     <style>
-        body {
-            display: flex;
-            margin: 0;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            font-family: system-ui;
-            background-color: rgba(55, 106, 70, 0.1);
-            color: #f2f5ff;
-            font-size: 2em;
-            text-shadow: 1px 1px rgba(0, 0, 0, .5);
-        }
+      body {
+        display: flex;
+        margin: 0;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-family: system-ui;
+        background-color: rgba(55, 106, 70, 0.1);
+        color: #f2f5ff;
+        font-size: 2em;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+      }
 
-        strong {
-            color: #f5e960;
-            padding: .15em .4em;
-            background: #dfb2f4;
-            border-radius: 20px;
-            border: 2px solid #f2f5ff;
-        }
+      strong {
+        color: #f5e960;
+        padding: 0.15em 0.4em;
+        background: #dfb2f4;
+        border-radius: 20px;
+        border: 2px solid #f2f5ff;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- <p>Hard work trumps natural talent</p> -->
     <script>
-        // function taggedTemplate(strings, param1, param2) {
-        //     console.log(strings);
-        //     console.log(param1);
-        //     console.log(param2);
-        // }
-        // taggedTemplate`hello world`; // ["hello world", raw: Array(1)] undefined undefined
-        // taggedTemplate`hello ${'world'}`; // ["hello ", "", raw: Array(2)] world undefined
-        // taggedTemplate`hello ${'world'} ${'!'}`; // ["hello ", "", raw: Array(3)] world !
-        function taggedTemplate2(strings, ...dynamicValues) {
-            // console.log(strings, dynamicValues);
-            let newContent = '';
-            strings.forEach((element, index) => {
-                const dynamicValue = dynamicValues[index];
-                const strong = dynamicValue ? `<strong>${dynamicValue}</strong>` : '';
-                newContent += `${element} ${strong}`;
-            });
-            // console.log(newContent);
-            return `<p>${newContent}</p>`;
-        }
-        const message = taggedTemplate2`${'Hard work'} trumps ${'natural talent'}`;
-        document.body.innerHTML = message;
+      // function taggedTemplate(strings, param1, param2) {
+      //     console.log(strings);
+      //     console.log(param1);
+      //     console.log(param2);
+      // }
+      // taggedTemplate`hello world`; // ["hello world", raw: Array(1)] undefined undefined
+      // taggedTemplate`hello ${'world'}`; // ["hello ", "", raw: Array(2)] world undefined
+      // taggedTemplate`hello ${'world'} ${'!'}`; // ["hello ", "", raw: Array(3)] world !
+      function taggedTemplate2(strings, ...dynamicValues) {
+        // console.log(strings, dynamicValues);
+        let newContent = "";
+        strings.forEach((element, index) => {
+          const dynamicValue = dynamicValues[index];
+          const strong = dynamicValue ? `<strong>${dynamicValue}</strong>` : "";
+          newContent += `${element} ${strong}`;
+        });
+        // console.log(newContent);
+        return `<p>${newContent}</p>`;
+      }
+      const message = taggedTemplate2`${"Hard work"} trumps ${"natural talent"}`;
+      document.body.innerHTML = message;
     </script>
-</body>
+  </body>
 </html>
