@@ -1,0 +1,1 @@
+export const BURN_CALORIES = 'BURN_CALORIES';
