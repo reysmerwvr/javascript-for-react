@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template Literals Expressions</title>
-</head>
-<body>
-<script>
-    const name = 'Jonh';
-    console.log(`My name is ${name}`);
-    console.log(`Age ${29}`);
-    console.log(`This is the ${'Javascript Course for React'}`);
-    console.log(`My full name ${x = 'Jonh Doe'}`);
-    console.log(`My full name in function name ${(function name() {
-        return 'Jonh';
-    })()}`);
-    console.log(`My full name in anonymous function ${(function () {
-        return 'Jonh';
-    })()}`);
-    console.log(`My full name in arrow function ${(() => 'Jonh')()}`);
-    console.log(`My full name in ternary ${true && 'Jonh'}`);
-    console.log(`My full name in ternary ${false ? 'Jonh' : 'Jane'}`);
-    console.log(`Map in template literal ${['a', 'b'].map(letter => `${letter}-styled`)}`);
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      const name = "Jonh";
+      console.log(`My name is ${name}`);
+      console.log(`Age ${29}`);
+      console.log(`This is the ${"Javascript Course for React"}`);
+      console.log(`My full name ${(x = "Jonh Doe")}`);
+      console.log(
+        `My full name in function name ${(function name() {
+          return "Jonh";
+        })()}`
+      );
+      console.log(
+        `My full name in anonymous function ${(function () {
+          return "Jonh";
+        })()}`
+      );
+      console.log(`My full name in arrow function ${(() => "Jonh")()}`);
+      console.log(`My full name in ternary ${true && "Jonh"}`);
+      console.log(`My full name in ternary ${false ? "Jonh" : "Jane"}`);
+      console.log(
+        `Map in template literal ${["a", "b"].map(
+          (letter) => `${letter}-styled`
+        )}`
+      );
+    </script>
+  </body>
 </html>
