@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlockBuster</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <img src="./images/logo.png" alt="">
+    </div>
+  </header>
+  <section class="wrapper">
+    <div class="actions">
+      <form action="" id="search-form">
+        <input placeholder="Type your favorite movie" name="title" type="Search a movie" />
+        <button>Search</button>
+      </form>
+      <button id="recommended">Recomended movies</button>
+      <select name="" id="filter">
+        <option value="all">All</option>
+        <option value="most-valued">Most Valued</option>
+        <option value="least-valued">Least Valued</option>
+      </select>
+    </div>
+  </section>
+  <div class="wrapper">
+    <section class="movie-list" id="container">
+      <article class="movie recommended">
+        <img class="movie-poster" src="//image.tmdb.org/t/p/w220_and_h330_face/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg" alt="">
+        <p class="movie-title">Hard Kill</p>
+        <p class="movie-id">724989</p>
+        <span class="movie-rate">5.8</span>
+      </article>
+    </section>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
